@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.wendykierp</groupId>
     <artifactId>CSparseJ</artifactId>
-    <version>1.2</version>
+    <version>1.3-SNAPSHOT</version>
     <name>CSparseJ</name>
     <description>CSparseJ is a Java port of CXSparse: a Concise eXtended Sparse Matrix Package.</description>
     <url>https://github.com/wendykierp/CSparseJ</url>
@@ -19,7 +19,7 @@
         <url>https://github.com/wendykierp/CSparseJ.git</url>
         <connection>scm:git:https://github.com/wendykierp/CSparseJ.git</connection>
         <developerConnection>scm:git:https://github.com/wendykierp/CSparseJ.git</developerConnection>
-        <tag>CSparseJ-1.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
