@@ -34,7 +34,7 @@ public class Dcs_house {
 
     /**
      * Compute a Householder reflection, overwrite x with v, where
-     * (I-beta*v*v')*x = s*e1. See Algo 5.1.1, Golub & Van Loan, 3rd ed.
+     * (I-beta*v*v')*x = s*e1. See Algo 5.1.1, Golub and Van Loan, 3rd ed.
      * 
      * @param x
      *            x on output, v on input

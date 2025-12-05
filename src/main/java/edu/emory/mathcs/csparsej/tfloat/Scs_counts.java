@@ -60,7 +60,7 @@ public class Scs_counts {
     }
 
     /**
-     * Column counts of LL'=A or LL'=A'A, given parent & postordering
+     * Column counts of LL'=A or LL'=A'A, given parent and postordering
      * 
      * @param A
      *            column-compressed matrix

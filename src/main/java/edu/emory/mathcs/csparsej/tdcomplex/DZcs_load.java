@@ -21,19 +21,18 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301
  *
  */
+package edu.emory.mathcs.csparsej.tdcomplex;
 
-package edu.emory.mathcs.csparsej.tdcomplex ;
-
-import java.io.BufferedReader ;
-import java.io.IOException ;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-import edu.emory.mathcs.csparsej.tdcomplex.DZcs_common.DZcs ;
+import edu.emory.mathcs.csparsej.tdcomplex.DZcs_common.DZcs;
 
-import static edu.emory.mathcs.csparsej.tdcomplex.DZcs_util.cs_spalloc ;
-import static edu.emory.mathcs.csparsej.tdcomplex.DZcs_entry.cs_entry ;
+import static edu.emory.mathcs.csparsej.tdcomplex.DZcs_util.cs_spalloc;
+import static edu.emory.mathcs.csparsej.tdcomplex.DZcs_entry.cs_entry;
 
 /**
  * Load a sparse matrix from a file.
@@ -44,48 +43,46 @@ import static edu.emory.mathcs.csparsej.tdcomplex.DZcs_entry.cs_entry ;
  */
 public class DZcs_load {
 
-	/**
-	 * Loads a triplet matrix T from a file. Each line of the file contains
-	 * four values: a row index i, a column index j, a real value aij, and an
-	 * imaginary value aij.
-	 * The file is zero-based.
-	 *
-	 * @param fileName
-	 *            file name
-	 * @return T if successful, null on error
-	 */
-	public static DZcs cs_load(InputStream in)
-	{
-		int i, j;
-		double x[], x_re, x_im ;
-		DZcs T;
-		String line, tokens[] ;
-		Reader r = new InputStreamReader(in);
-		BufferedReader br = new BufferedReader(r);
+    /**
+     * Loads a triplet matrix T from an input stream. Each line in the stream
+     * contains four values: a row index i, a column index j, a real value aij,
+     * and an imaginary value aij.
+     *
+     * @param in input stream
+     * @return T if successful, null on error
+     */
+    public static DZcs cs_load(InputStream in) {
+        int i, j;
+        double x[], x_re, x_im;
+        DZcs T;
+        String line, tokens[];
+        Reader r = new InputStreamReader(in);
+        BufferedReader br = new BufferedReader(r);
 
-		T = cs_spalloc(0, 0, 1, true, true) ;	/* allocate result */
+        T = cs_spalloc(0, 0, 1, true, true);
+        /* allocate result */
 
-		try
-		{
-			while ((line = br.readLine()) != null)
-			{
-				tokens = line.trim().split("\\s+") ;
-				if (tokens.length != 4) return null ;
-				i = Integer.parseInt(tokens [0]) ;
-				j = Integer.parseInt(tokens [1]) ;
-				x_re = Double.parseDouble(tokens [2]) ;
-				x_im = Double.parseDouble(tokens [3]) ;
-				x = new double[] {x_re, x_im} ;
-				if (!cs_entry(T, i, j, x)) return (null) ;
-			}
-			r.close();
-			br.close();
-		}
-		catch (IOException e)
-		{
-			return (null) ;
-		}
-		return (T) ;
-	}
+        try {
+            while ((line = br.readLine()) != null) {
+                tokens = line.trim().split("\\s+");
+                if (tokens.length != 4) {
+                    return null;
+                }
+                i = Integer.parseInt(tokens[0]);
+                j = Integer.parseInt(tokens[1]);
+                x_re = Double.parseDouble(tokens[2]);
+                x_im = Double.parseDouble(tokens[3]);
+                x = new double[]{x_re, x_im};
+                if (!cs_entry(T, i, j, x)) {
+                    return (null);
+                }
+            }
+            r.close();
+            br.close();
+        } catch (IOException e) {
+            return (null);
+        }
+        return (T);
+    }
 
 }

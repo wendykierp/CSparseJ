@@ -49,7 +49,7 @@ public class DZcs_house {
 	 * Compute a Householder reflection [v,beta,s]=house(x), overwrite x with v,
 	 * where (I-beta*v*v')*x = s*e1 and e1 = [1 0 ... 0]'.
 	 * Note that this CXSparseJ version is different than CSparseJ.  See Higham,
-	 * Accuracy & Stability of Num Algorithms, 2nd ed, 2002, page 357.
+	 * Accuracy and Stability of Num Algorithms, 2nd ed, 2002, page 357.
 	 *
 	 * @param x
 	 *            x on output, v on input

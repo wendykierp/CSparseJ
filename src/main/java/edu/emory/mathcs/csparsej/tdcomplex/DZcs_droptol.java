@@ -47,7 +47,7 @@ public class DZcs_droptol {
 	}
 
 	/**
-	 * Removes entries from a matrix with absolute value <= tol.
+	 * Removes entries from a matrix with absolute value {@literal <=} tol.
 	 *
 	 * @param A
 	 *            column-compressed matrix

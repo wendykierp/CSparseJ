@@ -38,7 +38,7 @@ public class Scs_qrsol {
 
     /**
      * Solve a least-squares problem (min ||Ax-b||_2, where A is m-by-n with m
-     * >= n) or underdetermined system (Ax=b, where m < n)
+     * >= n) or underdetermined system (Ax=b, where m {@literal <} n)
      * 
      * @param order
      *            ordering method to use (0 to 3)
