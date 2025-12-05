@@ -4,7 +4,7 @@
     <artifactId>CSparseJ</artifactId>
     <version>1.1.2-SNAPSHOT</version>
     <name>CSparseJ</name>
-    <description>CSparseJ is a Java port of CSparse: a Concise Sparse matrix package.</description>
+    <description>CSparseJ is a Java port of CXSparse: a Concise eXtended Sparse Matrix Package.</description>
     <url>https://github.com/wendykierp/CSparseJ</url>
 
     <licenses>
