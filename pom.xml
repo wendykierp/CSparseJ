@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.wendykierp</groupId>
-    <artifactId>csparsej</artifactId>
+    <artifactId>CSparseJ</artifactId>
     <version>1.1.2-SNAPSHOT</version>
     <name>CSparseJ</name>
     <description>CSparseJ is a Java port of CSparse: a Concise Sparse matrix package.</description>
@@ -16,7 +16,7 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/wendykierp/CSparseJ</url>
+        <url>https://github.com/wendykierp/CSparseJ.git</url>
         <connection>scm:git:https://github.com/wendykierp/CSparseJ.git</connection>
         <developerConnection>scm:git:https://github.com/wendykierp/CSparseJ.git</developerConnection>
         <tag>HEAD</tag>
@@ -65,7 +65,7 @@
                 <version>3.11.2</version>
                 <configuration>
                     <source>11</source>
-                    <doclint>none</doclint>
+                    <doclint>html</doclint>
                 </configuration> 
                 <executions>
                     <execution>
