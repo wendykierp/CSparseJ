@@ -40,7 +40,7 @@
         <github.global.server>github</github.global.server>
         <project.scm.id>github</project.scm.id>
         <skipTests>false</skipTests>    
-        <gpg.skip>true</gpg.skip>       
+        <gpg.skip>false</gpg.skip>       
     </properties>
 
     <build>
